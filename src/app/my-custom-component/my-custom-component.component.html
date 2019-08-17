@@ -1,0 +1,9 @@
+<ng-template #noUrl>
+  {{ name }}
+</ng-template>
+<span [style.font-size.em]="size">
+  <span [style.color]="color">Component name </span>
+  <ng-container *ngIf="url && url.length > 0; else noUrl">
+    <a [attr.href]="url" target="_blank">{{ name }}</a>
+  </ng-container>
+</span>
